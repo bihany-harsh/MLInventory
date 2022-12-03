@@ -13,7 +13,7 @@ app = Flask(__name__)
 # __________PREPARING THE CLASSIFER
 cur_dir = os.path.dirname(__file__)
 clf = pickle.load(open(os.path.join(cur_dir, 'pkl_objects', 'classifier.pkl'), 'rb'))
-db = os.path.join(cur_dir, 'reviews_sqlite')
+db = os.path.join(cur_dir, 'reviews.sqlite')
 
 def classify(document):
     label = {0: 'negative', 1: 'positive'}
